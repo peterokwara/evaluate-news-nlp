@@ -26,10 +26,14 @@ class MeaningCloudService {
       redirect: "follow",
     };
 
-    const response = await axios(
-      `https://api.meaningcloud.com/${this.api}`,
-      requestOptions
-    );
+    try {
+      const response = await axios(
+        `https://api.meaningcloud.com/${this.api}`,
+        requestOptions
+      );
+    } catch (error) {
+      throw new error(`Unable to send request to meaningcloud api${error}`);
+    }
 
     console.log(response.data);
   }

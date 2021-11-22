@@ -1,1 +1,3 @@
-console.log("these violent delights buff badies pop ahahaaha");
+import { checkForName } from "./js/nameChecker";
+import { handleSubmit } from "./js/formHandler";
+import "./styles/styles.scss";

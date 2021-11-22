@@ -6,5 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="">MeaningCloud Text Analysis Api</div>
+    </header>
+    <main>
+      <section>
+        <form class="" onsubmit="return handleSubmit(event)">
+          <input
+            id="name"
+            type="text"
+            name="input"
+            value=""
+            onblur="onBlur()"
+            placeholder="Text"
+          />
+          <input
+            id="button"
+            type="submit"
+            name=""
+            value="submit"
+            onclick="return handleSubmit(event)"
+            onsubmit="return handleSubmit(event)"
+          />
+        </form>
+      </section>
+
+      <section>
+        <strong>Form Results:</strong>
+        <div id="results"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>MeaningCloud is a a trademark by MeaningCloud LLC</p>
+    </footer>
+  </body>
 </html>

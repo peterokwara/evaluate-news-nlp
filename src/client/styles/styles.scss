@@ -1,0 +1,226 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #acc7ff;
+$on-primary-container: #1d192b;
+$secondary-color: #6d5348;
+$primary-surface: #1b1b1e;
+$secondary-surface: #232725;
+$text-color: #c4c6d0;
+$secondary-text-color: #625b71;
+$heading-size: 30px;
+$heading-size-tab: 60px;
+$body-size-tab: 30px;
+$heading-size-laptop: 70px;
+$body-size-laptop: 40px;
+$footer-size-tab: 20px;
+
+/// Base rules
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/// Layout rules
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 80px 1fr 80px;
+  grid-template-areas:
+    "h"
+    "c"
+    "f";
+}
+
+main {
+  grid-area: c;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  justify-content: center;
+
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    #name {
+      margin-right: 30px;
+    }
+  }
+
+  div {
+    min-height: 200px;
+  }
+}
+
+header {
+  grid-area: h;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: center;
+}
+
+footer {
+  grid-area: f;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  justify-content: center;
+}
+
+// Tablet
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  body {
+    grid-template-rows: 200px 1fr 80px;
+  }
+
+  section {
+    margin: 50px;
+  }
+}
+
+// Laptop
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  body {
+    grid-template-rows: 200px 1fr 80px;
+  }
+  section {
+    margin-left: 600px;
+    margin-right: 600px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+/// Theme rules
+body {
+  background-color: $primary-surface;
+}
+
+header {
+  div {
+    color: $text-color;
+    font-size: $heading-size;
+    text-align: center;
+  }
+}
+
+section:nth-child(1) {
+  #button {
+    background-color: $primary-color;
+    color: $secondary-text-color;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+  }
+  #name {
+    font-weight: bold;
+  }
+}
+
+section:nth-child(2) {
+  background-color: $secondary-surface;
+  strong {
+    color: $text-color;
+  }
+  #input {
+    border: none;
+    color: $text-color;
+  }
+}
+
+footer {
+  p {
+    color: $text-color;
+    text-align: center;
+  }
+}
+
+// Tablet
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  header {
+    div {
+      font-size: $heading-size-tab;
+    }
+  }
+  footer {
+    p {
+      font-size: $footer-size-tab;
+    }
+  }
+
+  section {
+    form {
+      input {
+        font-size: $body-size-tab;
+      }
+    }
+
+    strong,
+    div {
+      font-size: $body-size-tab;
+    }
+  }
+
+  section:nth-child(1) {
+    #button {
+      background-color: $primary-color;
+      color: $secondary-text-color;
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+      font-weight: bold;
+      font-size: $body-size-tab;
+    }
+    #name {
+      font-weight: bold;
+      font-size: $body-size-tab;
+    }
+  }
+
+  section:nth-child(2) {
+    background-color: $secondary-surface;
+    strong {
+      color: $text-color;
+      font-size: $body-size-tab;
+    }
+    #input {
+      border: none;
+      color: $text-color;
+      font-size: $body-size-tab;
+    }
+  }
+}
+
+// Laptop
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  header {
+    div {
+      font-size: $heading-size-laptop;
+    }
+  }
+  footer {
+    p {
+      font-size: $body-size-laptop;
+    }
+  }
+
+  section {
+    form {
+      input {
+        font-size: $body-size-laptop;
+      }
+    }
+
+    strong,
+    div {
+      font-size: $body-size-laptop;
+    }
+  }
+}

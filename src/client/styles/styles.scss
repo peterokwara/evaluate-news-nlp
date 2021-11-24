@@ -38,15 +38,17 @@ main {
 }
 
 section {
-  display: flex;
-  flex-direction: row;
   margin: 20px;
   justify-content: center;
+}
+
+section:nth-child(1) {
+  display: flex;
+  flex-direction: row;
 
   form {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     #name {
       margin-right: 30px;
     }
@@ -54,6 +56,16 @@ section {
 
   div {
     min-height: 200px;
+  }
+}
+
+section:nth-child(2) {
+  flex-direction: column;
+
+  #results {
+    min-height: 300px;
+    max-width: 200px;
+    word-wrap: break-word;
   }
 }
 
@@ -82,6 +94,16 @@ footer {
   section {
     margin: 50px;
   }
+
+  section:nth-child(2) {
+    flex-direction: column;
+
+    #results {
+      min-height: 300px;
+      max-width: 600px;
+      word-wrap: break-word;
+    }
+  }
 }
 
 // Laptop
@@ -94,6 +116,16 @@ footer {
     margin-right: 600px;
     margin-top: 50px;
     margin-bottom: 50px;
+  }
+
+  section:nth-child(2) {
+    flex-direction: column;
+
+    #results {
+      min-height: 300px;
+      max-width: 10000px;
+      word-wrap: break-word;
+    }
   }
 }
 
@@ -121,16 +153,14 @@ section:nth-child(1) {
   }
   #name {
     font-weight: bold;
+    border: none;
+    color: $text-color;
   }
 }
 
 section:nth-child(2) {
   background-color: $secondary-surface;
   strong {
-    color: $text-color;
-  }
-  #input {
-    border: none;
     color: $text-color;
   }
 }

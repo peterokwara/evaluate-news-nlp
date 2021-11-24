@@ -7,7 +7,8 @@ class MeaningCloudService {
     this.api = config.api;
   }
 
-  async sendRequest(text = "hello world") {
+  async sendRequest(text) {
+    let response;
     const formData = {
       key: this.license_key,
       lang: this.language,
@@ -20,16 +21,14 @@ class MeaningCloudService {
       data: formData,
       redirect: "follow",
     };
-
-    const response = await axios(
-      `https://api.meaningcloud.com/${this.api}`,
-      requestOptions
-    );
-
-    if (!response) {
-      throw new error(`Unable to send request to meaningcloud api${error}`);
+    try {
+      response = await axios(
+        `https://api.meaningcloud.com/${this.api}`,
+        requestOptions
+      );
+    } catch (error) {
+      console.log(error);
     }
-
     return response.data;
   }
 }

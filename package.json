@@ -4,8 +4,9 @@
   "description": "Nanodegree project",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server/index.js",
-    "serve-mon": "nodemon ./src/server/index.js",
+    "start": "run-s build-prod serve-prod",
+    "serve-prod": "node src/server/index.js",
+    "serve-dev": "nodemon ./src/server/index.js",
     "test": "run-s test-clean test-lint test-run",
     "test-lint": "eslint unit --ext .tsx,.ts",
     "test-clean": "rimraf coverage",

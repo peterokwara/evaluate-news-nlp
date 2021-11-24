@@ -1,9 +1,4 @@
-# Rename this file to be the README.md of your project. or just copy, paste and edit its contents to the default readMe created by github.
-
 <p align="center">
-  <a href="https://github.com/peterokwara/evaluate-news-nlp">
-    <img src="#" alt="evaluate-news-nlp" width=150 height=150>
-  </a>
   <h3 align="center">Evaluate News NLP</h3>
 
   <p align="center">
@@ -19,14 +14,13 @@
 
 - [About the Website](#about-the-website)
 - [Technical](#technical)
-- [To Do List](#to-do-list)
 - [Licence](#license)
 - [Versions](#versions)
 - [Contact Information](#contact-information)
 
 ### About the website
 
-Explain what your website is about. This is ideally not technical but you are exlplaining to a non-techie.
+This is a web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites.
 
 #### Hosted?
 
@@ -47,46 +41,69 @@ Add the link to where it is hosted at the top of your project
 
 #### Technology Used
 
-This project uses: - HTML - CSS - Bootstrap
+This project uses: - HTML - CSS - SCSS - JS - NodeJS - Webpack - Babel
 
 #### Running the project
 
-You can:
-a. clone the project and compile it yourself (Most up to date)
+A `.env` file needs to be created at the root of the project with the following files
 
-### To Do List
+- **LICENSE_KEY=""** obtained from [meaning cloud](https://www.meaningcloud.com/)
+- **LANGUAGE=** for now we will use **en** for language
+- **API=""** for now we will have the API use **topics-2.0**
 
-Add the various things that you are working on.
+The npm packages need to be installed by running
 
-- [ ] Adding bounce animations to the home page
-- [x] Creating a gallery
-- [x] Updating the website to the Maa 2.0 framework
-- [x] Praying that this thing works
-- [ ] Adding various potatoes to be eaten in the couch
-- [ ] Building a castle in the air
-- [ ] Listening to new musci from my favourite artist
+```console
+npm install
+```
+
+Once the installation process has been done, to run the project, you can run the backend server in developer mode by running:
+
+```console
+npm run serve-mon
+```
+
+To run the server in production mode, run:
+
+```
+npm run start
+```
+
+To run the fronted in developer mode, you can simply run:
+
+```console
+npm run build-dev
+```
+
+To run the frontend in production mode, you can simply run
+
+```console
+npm run build-prod
+```
+
+Once the project is running, the website can be accessed from `localhost:3000` by default.
 
 #### CONTRIBUTING
 
 I would/ We'd love to have your help in making **{this app (replace with name of your project)}** better. The project is still very incomplete, but if there's an issue you'd like to see addressed sooner rather than later, let me(/us) know.
 
-Before you contribute though read the contributing guide here: [COntributing.md{edit this}](https://github.com/YourUserNameHere/ProjectName/contributing.md)
+Before you contribute though read the contributing guide here: [COntributing.md](https://github.com/peterokwara/evaluate-news-nlp/blob/master/CONTRIBUTING.md)
 
-For any concerns, please open an [issue{edit this}](https://github.com/YourUserNameHere/ProjectName/issues), or JUST, [fork the project and send a pull request{edit this}](https://github.com/YourUserNameHere/ProjectName/pulls).
+For any concerns, please open an [issue](https://github.com/peterokwara/evaluate-news-nlp/issues), or JUST, [fork the project and send a pull request](https://github.com/peterokwara/evaluate-news-nlp/pulls).
 
 <hr>
 
 ### License
 
-- see [LICENSE](https://github.com/YourUserNameHere/ProjectName/LICENSE.md) file
+- see [LICENSE](https://github.com/peterokwara/evaluate-news-nlp/blob/master/LICENSE) file
 
 ### Versions
 
-- Version 1.0 DATE 19/01/2020
+- Version 1.0 DATE 24/11/2021
 
 ### Contact Information
 
-If you have found any bugs, or have any feedback or questions and or want to post a feature request please use the [Issuetracker](https://github.com/tamzi/ReadMe-MasterTemplates/issues) to report them.
+If you have found any bugs, or have any feedback or questions and or want to post a feature request please use the [Issuetracker](https://github.com/peterokwara/evaluate-news-nlp/issues) to report them.
 
 <hr>
 
@@ -94,4 +111,4 @@ If you have found any bugs, or have any feedback or questions and or want to pos
 
 <br>
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/tamzi/ReadMe-MasterTemplates/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/peterokwara/evaluate-news-nlp/blob/master/LICENSE)

@@ -24,18 +24,7 @@ This is a web tool that allows users to run Natural Language Processing (NLP) on
 
 #### Hosted?
 
-Is the website hosted? IT SHOULD.
-there are a couple of free github hosted sites:
-_ [surge](https://surge.sh/)
-_ [netlify](https://www.netlify.com/)
-_ [cloudcanon](https://cloudcannon.com/) - For jekyll sites
-_ [now](https://zeit.co/now)
-
-Do you know others, [let us know here](https://github.com/tamzi/ReadMe-MasterTemplates/issues)
-
-Add the link to where it is hosted at the top of your project
-
-![Link your project location](https://raw.githubusercontent.com/tamzi/ReadMe-MasterTemplates/master/website/art/web.png "Link your project!")
+The project is hosted on Heroku [here](https://desolate-castle-57412.herokuapp.com/)
 
 ### Technical
 

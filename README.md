@@ -49,13 +49,13 @@ npm install
 Once the installation process has been done, to run the project, you can run the backend server in developer mode by running:
 
 ```console
-npm run serve-mon
+npm run serve-dev
 ```
 
 To run the server in production mode, run:
 
 ```
-npm run start
+npm run serve-prod
 ```
 
 To run the fronted in developer mode, you can simply run:
@@ -68,6 +68,12 @@ To run the frontend in production mode, you can simply run
 
 ```console
 npm run build-prod
+```
+
+To run both the frontend and backend in production mode, you can simply run
+
+```console
+npm run start
 ```
 
 Once the project is running, the website can be accessed from `localhost:3000` by default.

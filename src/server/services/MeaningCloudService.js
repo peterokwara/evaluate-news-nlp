@@ -4,7 +4,6 @@ class MeaningCloudService {
   constructor(config) {
     this.license_key = config.license_key;
     this.language = config.language;
-    this.api = config.api;
   }
 
   async sendRequest(text) {
@@ -23,12 +22,17 @@ class MeaningCloudService {
     };
     try {
       response = await axios(
-        `https://api.meaningcloud.com/${this.api}`,
+        `https://api.meaningcloud.com/topics-2.0`,
         requestOptions
       );
     } catch (error) {
       console.log(error);
     }
+
+    if (!response.data) {
+      throw new error(`No response data from the api`);
+    }
+
     return response.data;
   }
 }

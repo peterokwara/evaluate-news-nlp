@@ -1,17 +1,30 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #acc7ff;
-$on-primary-container: #1d192b;
-$secondary-color: #6d5348;
-$primary-surface: #1b1b1e;
-$secondary-surface: #232725;
-$text-color: #c4c6d0;
-$secondary-text-color: #625b71;
-$heading-size: 30px;
+// font family
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&family=Roboto+Slab&display=swap");
+$heading-font: Pacifico;
+$subtitle-font: Roboto;
+$button-font: Roboto;
+$body-font: Roboto Slab;
+
+// colors
+$primary: #003f63;
+$primary-dark: #001938;
+$primary-light: #3e6991;
+
+$secondary: #a1a5a6;
+$secondary-dark: #727677;
+$secondary-light: #d2d6d7;
+
+$text-on-primary: #ffffff;
+$text-on-secondary: #000000;
+
+// font size
+$heading-size: 96px;
 $heading-size-tab: 60px;
 $body-size-tab: 30px;
 $heading-size-laptop: 70px;
 $body-size-laptop: 40px;
 $footer-size-tab: 20px;
+$button-size: 14px;
 
 /// Base rules
 html,
@@ -26,7 +39,7 @@ body {
 body {
   display: grid;
   height: 100vh;
-  grid-template-rows: 80px 1fr 80px;
+  grid-template-rows: 150px 1fr 100px;
   grid-template-areas:
     "h"
     "c"
@@ -60,12 +73,18 @@ section:nth-child(1) {
 }
 
 section:nth-child(2) {
+  display: flex;
   flex-direction: column;
 
+  strong {
+    text-align: center;
+  }
+
   #results {
-    min-height: 300px;
-    max-width: 200px;
-    word-wrap: break-word;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    flex-grow: 1;
   }
 }
 
@@ -131,129 +150,52 @@ footer {
 
 /// Theme rules
 body {
-  background-color: $primary-surface;
+  background-color: $primary;
 }
 
 header {
-  div {
-    color: $text-color;
-    font-size: $heading-size;
+  h1 {
+    color: $text-on-primary;
     text-align: center;
+    font-family: $heading-font;
   }
 }
 
 section:nth-child(1) {
   #button {
-    background-color: $primary-color;
-    color: $secondary-text-color;
+    background-color: $secondary;
+    color: $text-on-secondary;
     padding: 10px;
     border-radius: 4px;
     border: none;
     font-weight: bold;
+    font-family: $button-font;
+    font-size: $button-size;
   }
   #name {
     font-weight: bold;
     border: none;
-    color: $text-color;
+    color: $text-on-secondary;
+    font-family: $body-font;
   }
 }
 
 section:nth-child(2) {
-  background-color: $secondary-surface;
   strong {
-    color: $text-color;
+    color: $text-on-primary;
+    font-family: $subtitle-font;
   }
   #results {
-    color: $text-color;
+    background-color: $secondary;
+    color: $text-on-secondary;
+    font-family: $body-font;
   }
 }
 
 footer {
   p {
-    color: $text-color;
+    color: $text-on-primary;
     text-align: center;
-  }
-}
-
-// Tablet
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  header {
-    div {
-      font-size: $heading-size-tab;
-    }
-  }
-  footer {
-    p {
-      font-size: $footer-size-tab;
-    }
-  }
-
-  section {
-    form {
-      input {
-        font-size: $body-size-tab;
-      }
-    }
-
-    strong,
-    div {
-      font-size: $body-size-tab;
-    }
-  }
-
-  section:nth-child(1) {
-    #button {
-      background-color: $primary-color;
-      color: $secondary-text-color;
-      padding: 10px;
-      border-radius: 4px;
-      border: none;
-      font-weight: bold;
-      font-size: $body-size-tab;
-    }
-    #name {
-      font-weight: bold;
-      font-size: $body-size-tab;
-    }
-  }
-
-  section:nth-child(2) {
-    background-color: $secondary-surface;
-    strong {
-      color: $text-color;
-      font-size: $body-size-tab;
-    }
-    #input {
-      border: none;
-      color: $text-color;
-      font-size: $body-size-tab;
-    }
-  }
-}
-
-// Laptop
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-  header {
-    div {
-      font-size: $heading-size-laptop;
-    }
-  }
-  footer {
-    p {
-      font-size: $body-size-laptop;
-    }
-  }
-
-  section {
-    form {
-      input {
-        font-size: $body-size-laptop;
-      }
-    }
-
-    strong,
-    div {
-      font-size: $body-size-laptop;
-    }
+    font-family: $body-font;
   }
 }

@@ -39,7 +39,7 @@ body {
 body {
   display: grid;
   height: 100vh;
-  grid-template-rows: 150px 1fr 100px;
+  grid-template-rows: 150px 1fr 80px;
   grid-template-areas:
     "h"
     "c"
@@ -51,12 +51,12 @@ main {
 }
 
 section {
+  display: flex;
   margin: 20px;
   justify-content: center;
 }
 
 section:nth-child(1) {
-  display: flex;
   flex-direction: row;
 
   form {
@@ -73,18 +73,16 @@ section:nth-child(1) {
 }
 
 section:nth-child(2) {
-  display: flex;
   flex-direction: column;
+  align-items: center;
 
   strong {
     text-align: center;
   }
 
   #results {
-    display: flex;
-    width: 100%;
-    height: 300px;
-    flex-grow: 1;
+    max-width: 300px;
+    word-wrap: break-word;
   }
 }
 
@@ -102,50 +100,6 @@ footer {
   flex-direction: row;
   margin: 10px;
   justify-content: center;
-}
-
-// Tablet
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  body {
-    grid-template-rows: 200px 1fr 80px;
-  }
-
-  section {
-    margin: 50px;
-  }
-
-  section:nth-child(2) {
-    flex-direction: column;
-
-    #results {
-      min-height: 300px;
-      max-width: 600px;
-      word-wrap: break-word;
-    }
-  }
-}
-
-// Laptop
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-  body {
-    grid-template-rows: 200px 1fr 80px;
-  }
-  section {
-    margin-left: 600px;
-    margin-right: 600px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-
-  section:nth-child(2) {
-    flex-direction: column;
-
-    #results {
-      min-height: 300px;
-      max-width: 10000px;
-      word-wrap: break-word;
-    }
-  }
 }
 
 /// Theme rules

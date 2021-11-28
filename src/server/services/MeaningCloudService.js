@@ -22,7 +22,7 @@ class MeaningCloudService {
     };
     try {
       response = await axios(
-        `https://api.meaningcloud.com/topics-2.0`,
+        `https://api.meaningcloud.com/sentiment-2.1`,
         requestOptions
       );
     } catch (error) {

@@ -12,7 +12,8 @@
     "test-clean": "rimraf coverage",
     "test-run": "jest -w 1",
     "build-prod": "webpack --config webpack.prod.js",
-    "build-dev": "webpack-dev-server --hot --config webpack.dev.js --open"
+    "build-dev": "webpack-dev-server --hot --config webpack.dev.js --open",
+    "heroku-prebuild": "npm install --dev"
   },
   "author": "Peter Okwara",
   "license": "MIT",

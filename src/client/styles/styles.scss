@@ -1,5 +1,6 @@
 // font family
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&family=Roboto+Slab&display=swap");
+
 $heading-font: Pacifico;
 $subtitle-font: Roboto;
 $button-font: Roboto;
@@ -19,12 +20,16 @@ $text-on-secondary: #000000;
 
 // font size
 $heading-size: 96px;
-$heading-size-tab: 60px;
-$body-size-tab: 30px;
-$heading-size-laptop: 70px;
-$body-size-laptop: 40px;
+$heading-size-tab: 50px;
+
+$body-size: 30;
+$body-size-tab: 20px;
+
+$footer-size: 90;
 $footer-size-tab: 20px;
+
 $button-size: 14px;
+$button-size-tab: 90;
 
 /// Base rules
 html,
@@ -81,6 +86,7 @@ section:nth-child(2) {
   }
 
   #results {
+    margin-top: 20px;
     max-width: 300px;
     word-wrap: break-word;
   }
@@ -100,6 +106,15 @@ footer {
   flex-direction: row;
   margin: 10px;
   justify-content: center;
+}
+
+// For tablets and laptops and desktops
+@media only screen and (min-width: 600px) {
+  section:nth-child(2) {
+    #results {
+      max-width: 600px;
+    }
+  }
 }
 
 /// Theme rules
@@ -151,5 +166,31 @@ footer {
     color: $text-on-primary;
     text-align: center;
     font-family: $body-font;
+  }
+}
+
+// For tablets and laptops and desktops
+@media only screen and (min-width: 600px) {
+  header {
+    h1 {
+      font-size: $heading-size-tab;
+    }
+  }
+  section:nth-child(1) {
+    #button {
+      font-size: $body-size-tab;
+    }
+    #name {
+      font-size: $body-size-tab;
+    }
+  }
+
+  section:nth-child(2) {
+    strong {
+      font-size: $body-size-tab;
+    }
+    #results {
+      font-size: $body-size-tab;
+    }
   }
 }

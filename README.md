@@ -24,7 +24,11 @@ This is a web tool that allows users to run Natural Language Processing (NLP) on
 
 #### Hosted?
 
-The project is hosted on Heroku [here](https://desolate-castle-57412.herokuapp.com/)
+The project is hosted on Heroku [here](https://desolate-castle-57412.herokuapp.com/). The project is deployed in development mode by setting
+
+```console
+heroku config:set NPM_CONFIG_PRODUCTION=false
+```
 
 ### Technical
 
@@ -38,7 +42,6 @@ A `.env` file needs to be created at the root of the project with the following 
 
 - **LICENSE_KEY=""** obtained from [meaning cloud](https://www.meaningcloud.com/)
 - **LANGUAGE=** for now we will use **en** for language
-- **API=""** for now we will have the API use **topics-2.0**
 
 The npm packages need to be installed by running
 

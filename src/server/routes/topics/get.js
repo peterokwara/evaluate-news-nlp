@@ -8,7 +8,7 @@ async function get(request) {
     api: process.env.API,
   };
   const meaningCloudService = new MeaningCloudService(config);
-  const response = await meaningCloudService.sendRequest(request.text);
+  const response = await meaningCloudService.sendRequest(request);
 
   return response;
 }

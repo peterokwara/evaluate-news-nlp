@@ -38,10 +38,9 @@ This project uses: - HTML - CSS - SCSS - JS - NodeJS - Webpack - Babel
 
 #### Running the project
 
-A `.env` file needs to be created at the root of the project with the following files
+A `.env` file needs to be created at the root of the project with the following text
 
 - **LICENSE_KEY=""** obtained from [meaning cloud](https://www.meaningcloud.com/)
-- **LANGUAGE=** for now we will use **en** for language
 
 The npm packages need to be installed by running
 

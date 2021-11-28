@@ -22,18 +22,10 @@ const handleSubmit = async (event) => {
   // Check what text was put into the form field
   let formText = document.getElementById("name").value;
 
-  // Throw error if the URL is invalid
-  if (!Client.urlChecker(formText)) {
-    alert("Invalid URL!");
-    throw new Error("Invalid url!");
-  }
+  // Do a check on the data, whether it's text or url and structure it
+  const data = Client.urlChecker(formText);
 
-  if (formText) {
-    // Set up the data
-    const data = {
-      text: formText,
-    };
-
+  if (data) {
     // Build the url to post the data to
     const url = `${apiUrl}/topic`;
 
@@ -45,6 +37,9 @@ const handleSubmit = async (event) => {
     response = await postData(url, options);
   }
 
+  if (!data) {
+    throw new Error("No data to post! Please put some data");
+  }
   // Update UI
   await updateUI(response);
 };

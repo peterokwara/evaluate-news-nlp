@@ -22,6 +22,12 @@ const handleSubmit = async (event) => {
   // Check what text was put into the form field
   let formText = document.getElementById("name").value;
 
+  // Throw error if the URL is invalid
+  if (!Client.urlChecker(formText)) {
+    alert("Invalid URL!");
+    throw new Error("Invalid url!");
+  }
+
   if (formText) {
     // Set up the data
     const data = {

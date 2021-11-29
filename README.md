@@ -56,7 +56,7 @@ npm run serve-dev
 
 To run the server in production mode, run:
 
-```
+```console
 npm run serve-prod
 ```
 

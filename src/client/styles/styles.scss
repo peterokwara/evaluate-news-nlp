@@ -18,6 +18,8 @@ $secondary-light: #d2d6d7;
 $text-on-primary: #ffffff;
 $text-on-secondary: #000000;
 
+$transparent: rgba(0, 0, 0, 0.4);
+
 // font size
 $heading-size: 96px;
 $heading-size-tab: 50px;
@@ -117,6 +119,24 @@ footer {
   }
 }
 
+/// Module rules
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  .modal-content {
+    margin: 0% auto;
+    padding: 20px;
+    width: 80%;
+  }
+}
+
 /// Theme rules
 body {
   background-color: $primary;
@@ -166,6 +186,36 @@ footer {
     color: $text-on-primary;
     text-align: center;
     font-family: $body-font;
+  }
+}
+
+.modal {
+  background-color: $transparent;
+  .modal-content {
+    background-color: $primary-dark;
+  }
+
+  .close {
+    color: $secondary-light;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  h2 {
+    color: $text-on-primary;
+    font-family: $heading-font;
+  }
+
+  p {
+    color: $text-on-primary;
+    font-family: $body-font;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
   }
 }
 

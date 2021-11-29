@@ -1,3 +1,5 @@
+import modal from "./modal";
+
 // The url for the api
 const apiUrl = `http://localhost:3000`;
 
@@ -22,6 +24,13 @@ const handleSubmit = async (event) => {
   // Check what text was put into the form field
   let formText = document.getElementById("name").value;
 
+  //Check to see if the value is empty
+  if (!formText) {
+    // Show up a modal
+    modal();
+    throw new Error("No data to post! Please put some data");
+  }
+
   // Do a check on the data, whether it's text or url and structure it
   const data = Client.urlChecker(formText);
 
@@ -37,9 +46,6 @@ const handleSubmit = async (event) => {
     response = await postData(url, options);
   }
 
-  if (!data) {
-    throw new Error("No data to post! Please put some data");
-  }
   // Update UI
   await updateUI(response);
 };

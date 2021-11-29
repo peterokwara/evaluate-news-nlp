@@ -6,6 +6,9 @@ const apiUrl = `http://localhost:3000`;
 // Get the loader
 const loader = document.getElementsByClassName("loader")[0];
 
+// Get the results box
+const results = document.getElementById("results");
+
 // Create default options for making a request
 let options = {
   method: "",
@@ -38,6 +41,9 @@ const handleSubmit = async (event) => {
   const data = Client.urlChecker(formText);
 
   if (data) {
+    // Clear any data in the results
+    results.innerHTML = "";
+
     // Activate loader
     loader.style.display = "block";
 
@@ -80,8 +86,6 @@ const postData = async (url = "", options = {}) => {
  * @param data the data to display in the user interface
  */
 const updateUI = async (data) => {
-  const results = document.getElementById("results");
-
   if (data) {
     results.innerHTML = JSON.stringify(data);
   }

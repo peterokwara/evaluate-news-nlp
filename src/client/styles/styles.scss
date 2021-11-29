@@ -137,6 +137,26 @@ footer {
   }
 }
 
+.loader {
+  display: none;
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  left: 60%;
+  top: 60%;
+  margin: -76px 0 0 -76px;
+}
+
+// For tablets and laptops and desktops
+@media only screen and (min-width: 600px) {
+  .loader {
+    left: 54%;
+    top: 55%;
+  }
+}
+
 /// Theme rules
 body {
   background-color: $primary;
@@ -216,6 +236,22 @@ footer {
     color: black;
     text-decoration: none;
     cursor: pointer;
+  }
+}
+
+.loader {
+  border: 16px solid $secondary-light; /* Light grey */
+  border-top: 16px solid $primary-light; /* Blue */
+
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 

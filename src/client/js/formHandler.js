@@ -3,6 +3,9 @@ import modal from "./modal";
 // The url for the api
 const apiUrl = `http://localhost:3000`;
 
+// Get the loader
+const loader = document.getElementsByClassName("loader")[0];
+
 // Create default options for making a request
 let options = {
   method: "",
@@ -35,6 +38,9 @@ const handleSubmit = async (event) => {
   const data = Client.urlChecker(formText);
 
   if (data) {
+    // Activate loader
+    loader.style.display = "block";
+
     // Build the url to post the data to
     const url = `${apiUrl}/topic`;
 
@@ -44,6 +50,9 @@ const handleSubmit = async (event) => {
 
     // Post data to the backend api
     response = await postData(url, options);
+
+    // Deactivate loader
+    loader.style.display = "none";
   }
 
   // Update UI

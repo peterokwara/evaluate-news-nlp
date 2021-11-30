@@ -53,10 +53,6 @@ class MeaningCloudService {
       console.log(error);
     }
 
-    if (!response.data) {
-      throw new error(`No response data from the api`);
-    }
-
     return response.data;
   }
 }

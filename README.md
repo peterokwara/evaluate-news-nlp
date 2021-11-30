@@ -78,6 +78,12 @@ To run both the frontend and backend in production mode, you can simply run
 npm run start
 ```
 
+To run tests, you can simply run
+
+```console
+npm run test
+```
+
 Once the project is running, the website can be accessed from `localhost:3000` by default.
 
 #### CONTRIBUTING

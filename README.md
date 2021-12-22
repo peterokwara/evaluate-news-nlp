@@ -22,6 +22,10 @@
 
 This is a web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites.
 
+<p align="center">
+  <img src="./assets/TYSWRUv0Vc.gif"/>
+</p>
+
 #### Hosted?
 
 The project is hosted on Heroku [here](https://desolate-castle-57412.herokuapp.com/). The project is deployed in development mode by setting
